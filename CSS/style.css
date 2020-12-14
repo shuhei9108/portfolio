@@ -485,7 +485,39 @@ span {
     text-decoration: none;
 }*/
 
-@media (min-width: 560px) {
+@media (min-width: 600px) {
+}
+
+@media (min-width: 750px) {
+  /* エクスペリエンス */
+  .module-cardsgroup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .l-wrapper_01 {
+    width: 50%;
+  }
+  .card_01 {
+    height: 100%;
+  }
+  /* メニュー */
+  .drawer {
+    display: none;
+  }
+  .module-menu {
+    display: flex;
+  }
+
+  /* PR */
+  .module-contsboxgroup {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .module-contsbox {
+    width: 45%;
+  }
   /* モチベーション */
   .module-section-motivation {
     padding: 3rem 3rem 0rem 3rem;
@@ -508,68 +540,6 @@ span {
   }
   .visible-pc {
     display: block;
-  }
-}
-
-@media (min-width: 600px) {
-  .drawer {
-    display: none;
-  }
-  .module-menu {
-    display: flex;
-  }
-
-  /* PR */
-  .module-contsboxgroup {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .module-contsbox {
-    width: 45%;
-  }
-}
-
-@media (min-width: 750px) {
-  /* エクスペリエンス */
-  .module-cardsgroup {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  .l-wrapper_01 {
-    width: 50%;
-  }
-  .card_01 {
-    height: 100%;
-  }
-  /* モチベーション */
-  .module-section-motivation {
-    padding: 3rem 5rem 2rem 5rem;
-  }
-  .module-motivation-text > p > span {
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-  }
-  .module-sub-subtitle {
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-  }
-  /* ビリーフ */
-  .module-belifsection {
-    padding: 2rem 4rem 2rem 4rem;
-  }
-  .module-belif-text > p > span {
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-  }
-  /* フッター */
-  .module-foot-button {
-    width: 33%;
-  }
-  .module-foot-title {
-    font-size: 3rem;
-    bottom: -1rem;
   }
 }
 
