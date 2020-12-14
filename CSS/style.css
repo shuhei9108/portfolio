@@ -1,0 +1,623 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.theme-backgroundA {
+  background-color: #007bc7;
+}
+
+.is-font-selif {
+  font-family: serif;
+}
+
+.is-font-white {
+  color: white;
+}
+
+.is-font-theme {
+  color: #007bc7;
+}
+
+.emp {
+  font-weight: bold;
+}
+
+.first-letter-1:first-letter {
+  color: #007bc7;
+}
+
+span {
+  display: inline-block;
+}
+
+.underline-blue {
+  border: 1px solid #007bc7;
+  width: 15rem;
+  margin: auto;
+  margin-top: -0.5rem;
+  background-color: #007bc7;
+}
+
+.container {
+  margin: 0 auto;
+  font-size: 0.8rem;
+  text-align: center;
+  /* line-height: 1rem; */
+  width: 100%;
+  font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans",
+    "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo,
+    "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.l-header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+}
+
+.moveunder-headerH {
+  height: 60px;
+}
+
+/*------------------------------
+
+  ここから下がハンバーガーメニュー
+  に関するCSS
+
+------------------------------*/
+
+/* チェックボックスは非表示に */
+.drawer-hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer-open {
+  margin-right: 0.5rem;
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100; /* 重なり順を一番上に */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #fff;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線のうち一番上の棒の位置調整 */
+.drawer-open span:before {
+  bottom: 8px;
+}
+
+/* 三本線のうち一番下の棒の位置調整 */
+.drawer-open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer-check:checked ~ .drawer-open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer-check:checked ~ .drawer-open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer-check:checked ~ .drawer-open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* メニューのデザイン*/
+.drawer-content {
+  width: 100%;
+  height: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 100%; /* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: #007bc7;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.drawer-content > p {
+  margin-left: 0.5rem;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer-check:checked ~ .drawer-content {
+  left: 50%; /* メニューを画面に入れる */
+}
+
+/* ================================== */
+
+.module-top {
+  margin-left: 1rem;
+}
+
+.module-menu {
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.module-menu > p {
+  margin-right: 2rem;
+}
+
+.module-menu-letter {
+  color: white;
+  text-decoration: none;
+}
+
+.main-visual {
+  width: 100%;
+  height: 500px;
+  text-align: center;
+  background-image: url(../IMG/tateyama.JPG);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.module-title {
+  font-family: serif;
+  margin-bottom: 0;
+  font-size: 3rem;
+}
+
+.module-subtitle {
+  margin-top: 0.5rem;
+}
+
+.module-text {
+  font-size: 1em;
+}
+
+.module-section {
+  padding: 3rem 1rem;
+}
+
+.sectiontitlebox {
+  margin-bottom: 2rem;
+}
+
+.module-profile-contsbox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.module-profile-contsbox > img {
+  display: block;
+  width: 20rem;
+  margin-bottom: 2rem;
+}
+
+.module-profile-contsbox > div {
+  width: 100%;
+  /* margin: 2rem; */
+  line-height: 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.bg-Times_square {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../IMG/Times_square.JPG);
+}
+
+.bg-sunset {
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-image: url(../IMG/snowmountain.JPG);
+}
+
+.module-contsboxgroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.module-contsbox {
+  width: 95%;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-left: 10px solid #007bc7;
+  border-right: 10px solid #007bc7;
+}
+
+.module-contsbox > p {
+  line-height: 1.2rem;
+}
+
+.module-contsboxtitle {
+  color: #007bc7;
+  font-size: 1.6rem;
+  font-family: serif;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/*--------------------------------------
+  カード型_01
+--------------------------------------*/
+.l-wrapper_01 {
+  padding: 1rem;
+  width: 100%;
+}
+
+.card_01 {
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
+  color: #212121;
+  text-decoration: none;
+  text-align: center;
+}
+
+.card__header_01 {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.card__title_01 {
+  color: #007bc7;
+  font-family: serif;
+  padding: 1rem 1.5rem 0;
+  font-size: 0rem;
+  order: 1;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
+
+.card__title_01 > span {
+  font-size: 1.6rem;
+}
+
+.card__thumbnail_01 {
+  width: 100%;
+  margin: 0;
+  order: 0;
+}
+
+.card__image_01 {
+  width: 100%;
+}
+
+.card__body_01 {
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+}
+
+.card__text_01 {
+  font-size: 0.8rem;
+  text-align: center;
+  text-decoration: none;
+  padding-bottom: 0;
+}
+
+.card__text2_01 {
+  font-size: 0;
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.card__text2_01 > span {
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+.card__text_01 + .card__text_01 {
+  margin-top: 0.5rem;
+}
+
+/* ====================== */
+
+.module-section-motivation {
+  padding: 3rem 1rem 0rem 1rem;
+}
+
+.module-section-motivation > section:last-of-type {
+  margin-bottom: 4rem;
+}
+
+.module-motivation-text {
+  margin-bottom: 6rem;
+}
+
+.module-motivation-text > p {
+  font-size: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.module-motivation-text > p > span {
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+.motivation-img {
+  width: 60%;
+  margin: 0.5rem;
+}
+
+.module-belif-text > p {
+  font-size: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.module-belif-text > p > span {
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+.module-sub-subtitle {
+  margin-bottom: 1.3rem;
+  font-size: 1.7rem;
+  font-family: serif;
+  font-weight: bold;
+  color: #007bc7;
+}
+
+.module-belifsection {
+  padding: 2rem;
+}
+
+.module-belifcontsbox {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+}
+
+.module-belifcontsbox > section:nth-of-type(n + 2) {
+  margin-top: 2rem;
+}
+
+.wrap-foot-tilte {
+  padding: 0 1rem;
+}
+
+.module-foot-title {
+  margin-bottom: 0px;
+  font-family: ゴシック;
+  text-align-last: center;
+  font-size: 1.7rem;
+  position: relative;
+  bottom: -0.5rem;
+  font-weight: bold;
+}
+
+.visible-pc {
+  display: none;
+}
+
+.l-footer {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+
+.module-foot-button {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 66%;
+  height: 50%;
+  border: 5px solid white;
+  font-size: 33px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.module-foot-button-text {
+  text-align: center;
+}
+
+.module-creater-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.module-creater-conts {
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+
+/*.module-foot-button-text{
+    font-size:33px;
+    text-decoration: none;
+}*/
+
+@media (min-width: 560px) {
+  /* モチベーション */
+  .module-section-motivation {
+    padding: 3rem 3rem 0rem 3rem;
+  }
+  .module-motivation-text > p > span {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+  /* ビリーフ */
+  .module-belif-text > p > span {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+  /* フッター */
+  .module-foot-button {
+    width: 50%;
+  }
+  .visible-sm {
+    display: none;
+  }
+  .visible-pc {
+    display: block;
+  }
+}
+
+@media (min-width: 600px) {
+  .drawer {
+    display: none;
+  }
+  .module-menu {
+    display: flex;
+  }
+
+  /* PR */
+  .module-contsboxgroup {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .module-contsbox {
+    width: 45%;
+  }
+}
+
+@media (min-width: 750px) {
+  /* エクスペリエンス */
+  .module-cardsgroup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .l-wrapper_01 {
+    width: 50%;
+  }
+  .card_01 {
+    height: 100%;
+  }
+  /* モチベーション */
+  .module-section-motivation {
+    padding: 3rem 5rem 2rem 5rem;
+  }
+  .module-motivation-text > p > span {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+  .module-sub-subtitle {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+  /* ビリーフ */
+  .module-belifsection {
+    padding: 2rem 4rem 2rem 4rem;
+  }
+  .module-belif-text > p > span {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+  /* フッター */
+  .module-foot-button {
+    width: 33%;
+  }
+  .module-foot-title {
+    font-size: 3rem;
+    bottom: -1rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  /* モチベーション */
+  .module-section-motivation {
+    padding: 3rem 12rem 2rem 12rem;
+  }
+  /* ビリーフ */
+  .module-belifsection {
+    padding: 2rem 9rem 2rem 9rem;
+  }
+  .module-belif-text > p > span {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+  /* PR*/
+  .module-contsbox {
+    width: 30%;
+  }
+  /* エクスペリエンス */
+  .l-wrapper_01 {
+    width: 33.3%;
+  }
+  /* プロフィール */
+  .module-profile-contsbox {
+    width: 100%;
+    flex-direction: row;
+  }
+  .module-profile-contsbox > img {
+    height: 100%;
+    width: 20%;
+  }
+  .module-profile-contsbox > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 1rem;
+    height: 100%;
+    width: 20%;
+  }
+  /* フッター */
+  .module-foot-button {
+    width: 33%;
+  }
+  .module-foot-title {
+    font-size: 4rem;
+    bottom: -1.3rem;
+  }
+}
