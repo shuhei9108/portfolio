@@ -536,7 +536,7 @@ span {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
   }
   .l-wrapper_01 {
     width: 50%;
